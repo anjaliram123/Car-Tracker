@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Vin Number</th>
+    <th>FuelVolume</th>
+    <th>Speed</th>
+    <th>TimeStamp</th>
+    <th>Engine Hp</th>
+    <th>Engine RPM</th>
+    <th>Alerts</th>
+    <th>Location</th>
+  </tr>
+  </thead>
+  <tbody>
+    <td>{{readings?.vin}}</td>
+    <td>{{readings?.fuelVolume}}</td>
+    <td>{{readings?.speed}}</td>
+  <td>{{readings?.timestamp}}</td>
+  <td>{{readings?.engineHp}}</td>
+    <td>{{readings?.engineRpm}}</td>
+    <td><a *ngIf="readings" [routerLink]="['/alerts',readings?.vin]" class="btn btn-primary">Get Alerts</a></td>
+    <td><a *ngIf="readings"[routerLink]="['/location',readings?.vin]" class="btn btn-primary">Get Location</a></td>
+  </tbody>
+</table>
+<a [routerLink]="['/vehicles']" class="btn btn-primary">Go Back</a>
+
+
+
+
+
+

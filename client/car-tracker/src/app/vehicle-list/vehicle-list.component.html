@@ -1,0 +1,21 @@
+
+
+<table class="table">
+<thead>
+<tr>
+  <th>Make</th>
+  <th>Model</th>
+  <th>Year</th>
+  <th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let vehicle of vehicles">
+  <td>{{vehicle.make}}</td>
+  <td>{{vehicle.model}}</td>
+  <td>{{vehicle.year}}</td>
+  <td><a [routerLink]="['/vehicles',vehicle.vin]" class="btn btn-primary">Get Details</a></td>
+</tr>
+</tbody>
+</table>
+

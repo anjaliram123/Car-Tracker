@@ -1,0 +1,16 @@
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Timestamp</th>
+    <th>Alert Reason</th>
+    <th>Alert Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <td>{{alerts?.alertReason}}</td>
+  <td>{{alerts?.alertType}}</td>
+  <td>{{alerts?.timestamp}}</td>
+  </tbody>
+</table>
+<a [routerLink]="['/vehicles']" class="btn btn-primary">Go Back</a>
